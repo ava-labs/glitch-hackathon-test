@@ -1,17 +1,17 @@
 Initialize the repository:
 
 ```bash
-cd ${HOME}/avalanche-hackathon
+cd ${HOME}/glitch-hackathon-test
 forge init
 
-git remote add origin git@github.com:ava-labs/avalanche-hackathon.git
+git remote add origin git@github.com:ava-labs/glitch-hackathon-test.git
 git push -u origin main
 ```
 
 Install the dependencies:
 
 ```bash
-cd ${HOME}/avalanche-hackathon
+cd ${HOME}/glitch-hackathon-test
 
 # forge install NomicFoundation/hardhat
 # forge install https://github.com/NomicFoundation/hardhat
@@ -29,7 +29,7 @@ forge install opengsn/gsn@v3.0.0-beta.7
 Copy the trusted forwarder contract from [OpenGSN](https://github.com/opengsn/gsn):
 
 ```bash
-cd ${HOME}/avalanche-hackathon
+cd ${HOME}/glitch-hackathon-test
 # vi ./lib/gsn/packages/contracts/src/forwarder/Forwarder.sol
 cp ./lib/gsn/packages/contracts/src/forwarder/Forwarder.sol src/Forwarder.sol
 cp ./lib/gsn/packages/contracts/src/forwarder/IForwarder.sol src/IForwarder.sol
@@ -38,7 +38,7 @@ cp ./lib/gsn/packages/contracts/src/forwarder/IForwarder.sol src/IForwarder.sol
 Write the dependency remapping file:
 
 ```bash
-cd ${HOME}/avalanche-hackathon
+cd ${HOME}/glitch-hackathon-test
 cat << EOF > remappings.txt
 @opengsn/=lib/gsn/packages/
 @openzeppelin/=lib/openzeppelin-contracts/
@@ -50,15 +50,15 @@ EOF
 To update dependencies:
 
 ```bash
-cd ${HOME}/avalanche-hackathon
+cd ${HOME}/glitch-hackathon-test
 git submodule update --init --recursive
 
-cd ${HOME}/avalanche-hackathon
+cd ${HOME}/glitch-hackathon-test
 forge update
 ```
 
 ```bash
-cd ${HOME}/avalanche-hackathon
+cd ${HOME}/glitch-hackathon-test
 # vi ./lib/gsn/packages/contracts/src/forwarder/Forwarder.sol
 cp ./lib/gsn/packages/contracts/src/forwarder/Forwarder.sol src/Forwarder.sol
 cp ./lib/gsn/packages/contracts/src/forwarder/IForwarder.sol src/IForwarder.sol

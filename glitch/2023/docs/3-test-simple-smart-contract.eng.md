@@ -6,11 +6,11 @@ You can get `EVM_CHAIN_RPC_URL` from [local DEVNET](./1-connect-to-local-devnet-
 
 ```bash
 # make sure you have access to the simple counter contract file
-# https://github.com/ava-labs/avalanche-hackathon/blob/main/src/Counter.sol
+# https://github.com/ava-labs/glitch-hackathon-test/blob/main/src/Counter.sol
 #
 # to make sure your local git repo has all the deps
 # run the following two commands
-cd ./avalanche-hackathon
+cd ./glitch-hackathon-test
 git submodule update --init --recursive
 forge update
 ```
@@ -21,7 +21,7 @@ export TEST_PRIVATE_KEY="56289e99c94b6912bfc12adc093c9b51124f0dc54ac7a766b2bc5cc
 ```
 
 ```bash
-cd ./avalanche-hackathon
+cd ./glitch-hackathon-test
 forge create \
 --gas-price 700000000000 \
 --priority-gas-price 10000000000 \
